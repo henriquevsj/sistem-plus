@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1B273A10-A540-4268-8932-D404BEE1E5C9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Mercearia_Vila_Bela</RootNamespace>
+    <AssemblyName>Mercearia Vila Bela</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.8.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CadastroCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastroCategoria.Designer.cs">
+      <DependentUpon>CadastroCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadastroEmbalagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastroEmbalagem.Designer.cs">
+      <DependentUpon>CadastroEmbalagem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadastroFornecedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastroFornecedores.Designer.cs">
+      <DependentUpon>CadastroFornecedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Code\BLL\Cotacao\CadastroProdutoCotacaoBLL.cs" />
+    <Compile Include="Code\BLL\Cotacao\EcluirProdutoCotacaoBLL.cs" />
+    <Compile Include="Code\BLL\Cotacao\ExcluirUltimaCotacaoBLL.cs" />
+    <Compile Include="Code\BLL\Cotacao\NovaCotacaoBLL.cs" />
+    <Compile Include="Code\BLL\Cotacao\SelecionarMaximoIdBLL.cs" />
+    <Compile Include="Code\BLL\Login\LoginBLL.cs" />
+    <Compile Include="Code\DTO\CadastroProdutoCotacaoDTO.cs" />
+    <Compile Include="Code\DTO\CotacaoDTO.cs" />
+    <Compile Include="Code\DTO\LoginDTO.cs" />
+    <Compile Include="Cotacao\CotacaoSecundaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cotacao\CotacaoSecundaria.Designer.cs">
+      <DependentUpon>CotacaoSecundaria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cotacao\CotacoesSalvas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cotacao\CotacoesSalvas.Designer.cs">
+      <DependentUpon>CotacoesSalvas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cotacao\SelecionarProdutoCotacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cotacao\SelecionarProdutoCotacao.Designer.cs">
+      <DependentUpon>SelecionarProdutoCotacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nova_Salva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nova_Salva.Designer.cs">
+      <DependentUpon>Nova_Salva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas para cadastro de produto\PesquisarFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas para cadastro de produto\PesquisarFornecedor.Designer.cs">
+      <DependentUpon>PesquisarFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas para cadastro de produto\CadastroProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas para cadastro de produto\CadastroProduto.Designer.cs">
+      <DependentUpon>CadastroProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros.Designer.cs">
+      <DependentUpon>Cadastros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Code\BLL\Categoria\AtualizarCategoriaBLL.cs" />
+    <Compile Include="Code\BLL\Categoria\CadastroCategoriaBLL.cs" />
+    <Compile Include="Code\BLL\Categoria\ExcluirCategoriaBLL.cs" />
+    <Compile Include="Code\BLL\Embalagem\AtualizarEmbalagemBLL.cs" />
+    <Compile Include="Code\BLL\Embalagem\CadastroEmbalagemBLL.cs" />
+    <Compile Include="Code\BLL\Embalagem\ExcluirEmbalagemBLL.cs" />
+    <Compile Include="Code\BLL\Fornecedor\AtualizarFornecedorBLL.cs" />
+    <Compile Include="Code\BLL\Fornecedor\CadastroFornecedorBLL.cs" />
+    <Compile Include="Code\BLL\Fornecedor\ExcluirFornecedorBLL.cs" />
+    <Compile Include="Code\BLL\Fornecedor\PesquisaFornecedorBLL.cs" />
+    <Compile Include="Code\BLL\Produto\AtualizarProdutoBLL.cs" />
+    <Compile Include="Code\BLL\Produto\CadastroProdutoBLL.cs" />
+    <Compile Include="Code\BLL\PesquisaBLL.cs" />
+    <Compile Include="Code\BLL\Produto\ExcluirProdutoBLL.cs" />
+    <Compile Include="Code\DAL\conexaoBD.cs" />
+    <Compile Include="Code\DTO\CadastroCategoriaDTO.cs" />
+    <Compile Include="Code\DTO\CadastroEmbalagemDTO.cs" />
+    <Compile Include="Code\DTO\CadastroFornecedorDTO.cs" />
+    <Compile Include="Code\DTO\CadastroProdutoDTO.cs" />
+    <Compile Include="Cotacao\CotacaoInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cotacao\CotacaoInicial.Designer.cs">
+      <DependentUpon>CotacaoInicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Telas para cadastro de produto\PesquisarEmbalagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas para cadastro de produto\PesquisarEmbalagem.Designer.cs">
+      <DependentUpon>PesquisarEmbalagem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas para cadastro de produto\PesquisarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas para cadastro de produto\PesquisarCategoria.Designer.cs">
+      <DependentUpon>PesquisarCategoria.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CadastroCategoria.resx">
+      <DependentUpon>CadastroCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadastroEmbalagem.resx">
+      <DependentUpon>CadastroEmbalagem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadastroFornecedores.resx">
+      <DependentUpon>CadastroFornecedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cotacao\CotacaoSecundaria.resx">
+      <DependentUpon>CotacaoSecundaria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cotacao\CotacoesSalvas.resx">
+      <DependentUpon>CotacoesSalvas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cotacao\SelecionarProdutoCotacao.resx">
+      <DependentUpon>SelecionarProdutoCotacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nova_Salva.resx">
+      <DependentUpon>Nova_Salva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas para cadastro de produto\CadastroProduto.resx">
+      <DependentUpon>CadastroProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros.resx">
+      <DependentUpon>Cadastros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cotacao\CotacaoInicial.resx">
+      <DependentUpon>CotacaoInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Telas para cadastro de produto\PesquisarCategoria.resx">
+      <DependentUpon>PesquisarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas para cadastro de produto\PesquisarEmbalagem.resx">
+      <DependentUpon>PesquisarEmbalagem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas para cadastro de produto\PesquisarFornecedor.resx">
+      <DependentUpon>PesquisarFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
